@@ -8,7 +8,7 @@ function StakingCard() {
         <span className='bg-indigo-900 text-white text-md font-normal px-4 py-1 flex items-center'>Rewards: 0/day</span>
       </div>
       <div className=" flex justify-between py-3">
-        <span></span>
+        <span>Me</span>
         <span>0/0</span>
       </div>
       <div className=" flex justify-between py-3">

@@ -7,7 +7,7 @@ function MyNFTs() {
     nft_list: state.app_reducer.nft_list,
   }));
     return (
-      <div className='flex justify-between flex-wrap overflow-y-scroll h-96'>
+      <div className='flex flex-wrap overflow-y-scroll h-96'>
         {
           nft_list?.map((item) => (
             <NFT
