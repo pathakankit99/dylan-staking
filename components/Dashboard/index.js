@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import NotConnected from './NotConnected';
 import TokenCard from './TokenCard';
 import StakingCard from './StakingCard';
-import MyNFTs from './MyNFTs';
+import MyNFTs from '../MyNFTs';
 import Stats from './Stats';
 import LineChart from './LineChart';
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
-function index(props) {
+function Dashboard(props) {
   
   const { publicKey, sendTransaction } = useWallet();
     if (!publicKey) {
@@ -18,7 +18,7 @@ function index(props) {
     }
     else {
         return (
-          <section>
+          <section className='text-black'>
             <div className="item-center flex justify-between flex-wrap">
               <TokenCard />
               <StakingCard />
@@ -37,4 +37,4 @@ function index(props) {
     }
 }
 
-export default index;
+export default Dashboard

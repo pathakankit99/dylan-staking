@@ -2,10 +2,10 @@ import React from 'react';
 import Staked from "./Staked"
 import CurrentReward from "./CurrentReward"
 import TotalReward from "./TotalReward"
-import MyNFTs from "../Dashboard/MyNFTs"
+import MyNFTs from "../MyNFTs"
 function index() {
   return (
-    <div>
+    <div className='text-black'>
       <div className="justify-between flex flex-wrap">
         <Staked />
         <CurrentReward />

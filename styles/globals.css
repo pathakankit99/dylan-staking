@@ -7,3 +7,7 @@ button{
 .center{
     @apply flex items-center justify-center;
 }
+.brand-bg{
+    background: rgb(111,40,130);
+background: radial-gradient(circle, rgba(111,40,130,1) 0%, rgba(55,29,97,1) 100%);
+}

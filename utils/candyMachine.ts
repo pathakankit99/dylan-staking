@@ -270,9 +270,6 @@ export async function getNFTsForOwner(
   connection: anchor.web3.Connection,
   ownerAddress: anchor.web3.PublicKey
 ) {
-  const allMintsCandyMachine = await fetchHashTable(
-    process.env.NEXT_PUBLIC_CANDY_MACHINE_ID!
-  );
   const allTokens = [];
   const tokenAccounts = await connection.getParsedTokenAccountsByOwner(
     ownerAddress,
@@ -287,8 +284,7 @@ export async function getNFTsForOwner(
 
     if (
       tokenAmount.amount == "1" &&
-      tokenAmount.decimals == "0" &&
-      allMintsCandyMachine.includes(tokenAccount.account.data.parsed.info.mint)
+      tokenAmount.decimals == "0" 
     ) {
       let [pda] = await anchor.web3.PublicKey.findProgramAddress(
         [

@@ -19,7 +19,7 @@ export default function Home() {
           <div className="nes-container with-title mr-5 flex-1">
             <p className="title">Start/manage a farm</p>
             <p className="mb-5">
-              Choose this if you have your own NFT collection you'd like to
+              Choose this if you have your own NFT collection you would like to
               offer staking for.
             </p>
             <Link href="manager">
@@ -29,7 +29,7 @@ export default function Home() {
           <div className="nes-container with-title ml-5 flex-1">
             <p className="title">Stake your NFTs</p>
             <p className="mb-5">
-              Choose this if you'd like to stake your NFTs at one of the
+              Choose this if you like to stake your NFTs at one of the
               existing farms.
             </p>
             <Link href="farmer">

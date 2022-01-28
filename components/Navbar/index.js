@@ -2,10 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
-function index(props) {
+import ConnectToWallet from '../ConnectToWallet';
+function Navbar(props) {
   const { publicKey, sendTransaction } = useWallet();
   return (
-    <navbar className="flex items-center justify-between bg-indigo-700 p-6 text-white lg:px-64">
+    <nav className="flex items-center justify-between bg-indigo-700 p-6 text-white lg:px-64">
+      <ConnectToWallet/>
       <div>
         <Link href="/">
           <img
@@ -39,8 +41,8 @@ function index(props) {
           )}
         </ul>
       </div>
-    </navbar>
+    </nav>
   );
 }
 
-export default index
+export default Navbar
