@@ -1,3 +1,4 @@
+import React,{useEffect} from "react"
 import { useRouter } from "next/router";
 import { useWallet } from "@solana/wallet-adapter-react";
 import NotConnected from "../components/Dashboard/NotConnected";
