@@ -2,7 +2,7 @@ import React from 'react';
 
 function NFT(props) {
     return (
-      <div className="w-full p-4  md:w-3/12 lg:w-1/3">
+      <div className="w-full p-4 bg-red-500  md:w-3/12 lg:w-1/3">
         <div className="bg-gray-200">
           <div className="center">
             <img src={props.img} />

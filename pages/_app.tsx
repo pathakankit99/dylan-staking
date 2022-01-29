@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-
+import Head from 'next/head'
 //imports for redux
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "../store";
@@ -11,7 +11,9 @@ import dynamic from "next/dynamic";
 import { WalletBalanceProvider } from "../hooks/useWalletBalance";
 
 require("@solana/wallet-adapter-react-ui/styles.css");
-import Navbar from "../components/Navbar"
+// import Navbar from "../components/Navbar"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const WalletConnectionProvider = dynamic(
   () => import("../components/WalletConnection/WalletConnectionProvider"),
   {
@@ -26,8 +28,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Provider store={store}>
           <PersistGate loading={null} persistor={persistor}>
             <div>
-              <Navbar />
-              <div className="min-h-screen brand-bg text-white p-6 lg:px-64">
+              <Head>
+                <title>Stake NFT</title>
+                <link rel="icon" href="/favicon.ico" />
+              </Head>
+              {/* <Navbar /> */}
+              <div className="min-h-screen bg-brand_black text-white p-6 lg:px-64">
                 <Component {...pageProps} />
               </div>
             </div>

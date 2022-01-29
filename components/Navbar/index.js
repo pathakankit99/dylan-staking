@@ -6,41 +6,26 @@ import ConnectToWallet from '../ConnectToWallet';
 function Navbar(props) {
   const { publicKey, sendTransaction } = useWallet();
   return (
-    <nav className="flex items-center justify-between bg-indigo-700 p-6 text-white lg:px-64">
-      <ConnectToWallet/>
-      <div>
-        <Link href="/">
-          <img
-            width={100}
-            src="https://den.billionairecoyotecartel.com/_next/image?url=%2Fimg%2Flogo.svg&w=128&q=75"
-          />
-        </Link>
-      </div>
-      <div>
-        <ul className="flex items-center">
-          <li className="mr-4 cursor-pointer border border-indigo-700 px-4 py-1 font-bold uppercase hover:border-indigo-500">
-            <Link href="/dashboard">
-              <span>Dashboard</span>
-            </Link>
-          </li>
-          <li className="mr-4 cursor-pointer border border-indigo-700 px-4 py-1 font-bold uppercase ">
-            <Link href="/staking">
-              <span>Staking</span>
-            </Link>
-          </li>
-          {/* <li className="mr-4 cursor-pointer border border-indigo-700 px-4 py-1 font-bold uppercase hover:border-indigo-500">
-            <div>
-              <p className="text-xs font-normal">0xx01...6587</p>
-              <p className="text-xs font-normal">Connected</p>
-            </div>
-          </li> */}
-          {publicKey && (
-            <li className="mr-4 cursor-pointer border border-indigo-700 px-4 py-1 font-bold uppercase">
-              <WalletMultiButton />
-            </li>
-          )}
-        </ul>
-      </div>
+    <nav className="text-brand_white pb-3 mb-3 w-full flex flex-wrap justify-between border-b border-brand_accent">
+      <ConnectToWallet />
+      <ul className="flex items-center w-full w-full md:w-8/12 justify-center md:justify-start">
+        <li className="md:mr-4 cursor-pointer p-3 font-bold uppercase ">
+          <Link href="/dashboard">
+            <span>Dashboard</span>
+          </Link>
+        </li>
+        <li className="md:mr-4 cursor-pointer p-3 font-bold uppercase ">
+          <Link href="/staking">
+            <span>Staking</span>
+          </Link>
+        </li>
+      </ul>
+
+      {publicKey && (
+        <li className="pl-4 py-1 font-bold uppercase w-full md:w-4/12 flex justify-center md:justify-end my-3 md:m-0">
+          <WalletMultiButton />
+        </li>
+      )}
     </nav>
   );
 }
