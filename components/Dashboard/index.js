@@ -22,7 +22,7 @@ function Dashboard(props) {
           <section className="text-black">
             <Navbar />
 
-            <div className="mt-6 bg-brand_bg rounded my-6 p-6">
+            <div className="mt-6 bg-brand_accent rounded my-6 p-6">
               <h5 className=" pb-6 uppercase font-medium text-sm tracking-wider">
                 My NFTs
               </h5>
@@ -32,7 +32,7 @@ function Dashboard(props) {
               <TokenCard />
               <StakingCard />
             </div>
-            <div className="mt-6 bg-brand_bg rounded my-6 p-6">
+            <div className="mt-6 bg-brand_accent rounded my-6 p-6">
               <h5 className=" pb-6 uppercase font-medium text-sm tracking-wider">
                 Community Vault
               </h5>

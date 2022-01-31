@@ -1,6 +1,6 @@
-import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from 'next/head'
+// import "bootstrap/dist/css/bootstrap.css";
 //imports for redux
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "../store";
@@ -9,11 +9,11 @@ import { Provider } from "react-redux";
 //imports for web3
 import dynamic from "next/dynamic";
 import { WalletBalanceProvider } from "../hooks/useWalletBalance";
-
 require("@solana/wallet-adapter-react-ui/styles.css");
 // import Navbar from "../components/Navbar"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../styles/globals.css";
 const WalletConnectionProvider = dynamic(
   () => import("../components/WalletConnection/WalletConnectionProvider"),
   {

@@ -13,6 +13,10 @@ module.exports = {
         brand_bg: "#16161a",
         brand_accent: "#7f5af0",
         brand_tertiary: "#2cb67d",
+        brand_light_green:"#B4E620",
+        brand_green: "#C4E070",
+        brand_pink: "#F5CBCB",
+        brand_dark_pink: "#C46868",
       },
       opacity: {
         10: "0.1",
