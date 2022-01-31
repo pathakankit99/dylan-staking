@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <link rel="icon" href="/favicon.ico" />
               </Head>
               {/* <Navbar /> */}
-              <div className="min-h-screen bg-brand_black text-white p-6 lg:px-64">
+              <div className="min-h-screen bg-brand_bg text-white p-6 lg:px-64">
                 <Component {...pageProps} />
               </div>
             </div>
