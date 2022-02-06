@@ -31,14 +31,18 @@ p{
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    color: #fff;
+    color: black;
     text-align: center;
     white-space: nowrap;
-    background-color: #09860f;
+    background-color: #66fcf2;
     transition: width 0.6s ease;
 }
 
-.stats{
-    background: #5f2ff0e8;
-    color: white;
+
+.bg-lightcyan {
+    background: rgba(102, 252, 241, .8) !important;
+}
+
+.wallet-adapter-button-trigger{
+    background: rgba(102, 252, 241, .8) !important;
 }

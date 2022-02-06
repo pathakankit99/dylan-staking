@@ -6,8 +6,8 @@ import ConnectToWallet from '../ConnectToWallet';
 function Navbar(props) {
   const { publicKey, sendTransaction } = useWallet();
   return (
-    <nav className="text-brand_white pb-3 mb-3 w-full flex flex-wrap justify-between border-b border-brand_accent">
-      <ConnectToWallet />
+    <nav className="text-brand_white pb-3 mb-3 w-full flex flex-wrap justify-between border-b border-brand_tertiary">
+      <ConnectToWallet className="bg-lightcyan"/>
       <ul className="flex items-center w-full w-full md:w-8/12 justify-center md:justify-start">
         <li className="md:mr-4 cursor-pointer p-3 font-bold uppercase ">
           <Link href="/dashboard">
